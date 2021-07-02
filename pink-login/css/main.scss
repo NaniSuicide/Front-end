@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Comfortaa";
+}
+
+:root{
+
+    --primary-color:#EBB3B3;
+    --primary-color-hover:#ecabab;
+
+    --secondary-color:#707070;
+    --primary-color-dark:#D87777;
+}
+
+html{
+    font-size: 62.9%;
+}
+
+
+html, body{
+    width:calc(100vw - 0px/*15px*/);
+    height:calc(100vh - 0px/*20px*/);
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+
+    .title{
+        width: 100%;
+        height: 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.4rem;
+       
+
+        h1{
+            text-transform: uppercase;
+            color: var(--primary-color-dark);
+        }
+
+        .line{
+            width: 100%;
+            margin: 0.3em 0;
+            padding: 0.1rem;
+            max-width: 280px;
+            background-color: var(--secondary-color);
+        }
+    }
+
+    .login{
+        
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .login-card{
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0px 0px 10px 1px black;
+            width: 100%;
+            max-width: 300px;
+            padding:4rem 0;
+            border-radius: 5px 5px 5px;
+            background-color: white;
+
+            input{
+                margin: 2rem 1rem;
+                outline: none;
+                padding: 1rem 1rem;
+                border: none;
+            }
+
+            .line-in{
+                position: relative;
+                bottom: 15px;
+                width: 100%;
+                max-width: 0px;
+                margin: 0rem 1rem;
+                transition: max-width 2s;
+                padding: 0.1rem 0rem;
+                background-color: var(--secondary-color);
+            }
+
+            .submit{
+                border: none;
+                background-color: var(--primary-color);
+                font-size: 2rem;
+                color: var(--primary-color-dark);
+                font-weight: bold;
+                border-radius: 5px 5px 5px;
+            }
+
+            .submit:hover{
+                background-color:var(--primary-color-hover);
+            }         
+
+        }
+
+        .ball{
+            position: relative;
+            z-index: 1;
+            bottom:50px;
+            margin: -4rem 0;
+            width: 200px;
+            height: 190px;
+            background-color:var(--primary-color-dark);
+            border-radius: 100%;
+            box-shadow: 0px 0px 10px 1px black;
+            transition: bottom 2s;
+        }
+       
+    }
+
+    .login:hover{
+        .ball{
+            bottom: 320px;
+        }
+    }
+
+    
+    .login-card:hover{
+
+        .line-in{
+            max-width: 220px;
+        }
+   }
+}
+
+.clear{
+    clear: both;
+}
