@@ -38,7 +38,7 @@ html .card, body .card {
 html .card .container-top, body .card .container-top {
   width: 100%;
   min-height: 160px;
-  background-image: url(/images/image-header-mobile.jpg);
+  background-image: url(images/image-header-mobile.jpg);
   background-size: cover;
   background-position: center;
   border-radius: 2% 2% 0 0;
